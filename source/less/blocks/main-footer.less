@@ -5,6 +5,14 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.main-footer__wrapper {
+  position: relative;
 }
 
 .main-footer__map {
@@ -22,6 +30,10 @@
   width: 85%;
   padding-top: 28px;
   padding-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+  }
 }
 
 .main-footer__copy-link {
@@ -42,4 +54,8 @@
   width: 85%;
   border-top: 1px solid @color-light-grey;
   border-bottom: 1px solid @color-light-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 100px;
+  }
 }

@@ -1,9 +1,24 @@
 .programs__list {
   .list();
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    min-height: 374px;
+  }
 }
 
 .programs__item {
   background-color: @color-grey;
+
+  @media (min-width: @tablet-width) {
+    min-height: 372px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
 }
 
 .programs__wrapper {
@@ -44,4 +59,8 @@
   text-transform: uppercase;
   border-top: 1px solid @color-light-grey;
   text-decoration: none;
+
+  @media (min-width: @tablet-width) or (min-width: @desktop-width) {
+    border-top: none;
+  }
 }

@@ -1,6 +1,14 @@
 .intro {
   position: relative;
   .font();
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 
   &::before {
     content: "";
@@ -20,7 +28,7 @@
     bottom: 0;
     margin: 0 auto;
     width: 100%;
-    max-height: 302px;
+    height: 302px;
     background-image: url("../img/background-cat-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -28,11 +36,38 @@
     background-color: @color-dark-grey;
     z-index: -2;
   }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 696px;
+      background-color: fadeout(@color-green, 15);
+      z-index: -1;
+    }
+
+    &::after {
+      top: 0;
+      right: -50%;
+      width: 50%;
+      height: 696px;
+      background-image: url("../img/background-cat-desktop.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-color: @color-dark-grey;
+      z-index: -2;
+    }
+  }
 }
 
 .intro__wrapper {
   margin-left: 20px;
   margin-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 750px;
+  }
 }
 
 .intro__title {
@@ -43,6 +78,12 @@
   line-height: 36px;
   font-weight: 400;
   margin-bottom: 25px;
+  margin-top: 0;
+
+  @media (min-width: @tablet-width) {
+    color: @color-black;
+    text-align: start;
+  }
 }
 
 .intro__slogan {
@@ -52,12 +93,39 @@
   color: @color-white;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    color: @color-black;
+    text-align: start;
+  }
 }
 
 .intro__img {
   display: block;
   margin: 0 auto;
   margin-bottom: 3px;
-  width: 280px;
-  height: 270px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 140px;
+    left: 40%;
+  }
+}
+
+.intro__link {
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    padding: 15px 26px;
+  }
+}
+
+.intro__text {
+  @media (min-width: @desktop-width) {
+    padding-top: 140px;
+  }
 }
