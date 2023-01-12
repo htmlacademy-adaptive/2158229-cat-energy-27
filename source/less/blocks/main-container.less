@@ -12,6 +12,27 @@
   min-width: 320px;
 
   @media (min-width: @desktop-width) {
-    padding-top: 120px;
+    margin: 0 auto;
+    padding-top: 100px;
+    max-width: 1440px;
+    margin-bottom: 56px;
+  }
+}
+
+.main-container__slogan {
+  margin: 0;
+  .font();
+  color: @color-black;
+  padding: 20px;
+  padding-top: 0;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-bottom: 66px;
   }
 }
