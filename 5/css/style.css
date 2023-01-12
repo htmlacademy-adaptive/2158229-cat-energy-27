@@ -67,7 +67,30 @@ body {
 }
 @media (min-width: 1440px) {
   .main-container__title {
-    padding-top: 120px;
+    margin: 0 auto;
+    padding-top: 100px;
+    max-width: 1440px;
+    margin-bottom: 56px;
+  }
+}
+.main-container__slogan {
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  padding: 20px;
+  padding-top: 0;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+@media (min-width: 1440px) {
+  .main-container__slogan {
+    display: block;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-bottom: 66px;
   }
 }
 .main-nav {
@@ -87,6 +110,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    margin: 0 auto;
+    max-width: 1440px;
   }
 }
 .main-nav__list {
@@ -780,18 +805,6 @@ body {
   font-weight: 400;
   color: #ffffff;
 }
-.form__slogan {
-  margin: 0;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: #000000;
-  padding: 20px;
-  padding-top: 0;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-}
 .form {
   padding: 20px;
   padding-top: 0;
@@ -802,6 +815,16 @@ body {
   line-height: 18px;
   color: #444444;
   text-transform: uppercase;
+}
+.form__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.form__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
 }
 .form__block-subtitle {
   font-family: "Oswald", "Arial", sans-serif;
@@ -827,5 +850,142 @@ body {
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
+}
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-bottom: 25px;
+}
+@media (min-width: 1440px) {
+  .form__fieldset {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+}
+@media (min-width: 1440px) {
+  .form__fieldset--text-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+.form__data-input,
+.form__contacts-input,
+.form__input-tel {
+  padding: 12px 15px 13px;
+  flex-grow: 1;
+}
+.form__list--radio-group {
+  padding: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+@media (min-width: 768px) {
+  .form__list--radio-group {
+    border: 1px solid #d9d9d9;
+    margin: 0;
+  }
+}
+.form__icon-tel,
+.form__icon-email {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 20px;
+  height: 21px;
+}
+@media (min-width: 1440px) {
+  .form__icon-tel,
+  .form__icon-email {
+    right: 17px;
+  }
+}
+.form__contacts-label {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.form__legend {
+  margin-bottom: 35px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  width: 100%;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000000;
+}
+.form__comments-input {
+  padding: 9px 15px 9px 12px;
+  width: 100%;
+  min-height: 150px;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid #e7e7e7;
+  resize: none;
+  outline: 0;
+  box-sizing: border-box;
+}
+.form__submit-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 21px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+}
+@media (min-width: 768px) {
+  .form__submit-button {
+    margin-bottom: 0;
+    margin-right: 62px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    width: 282px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+@media (min-width: 768px) {
+  .form__list--extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 42px;
+  }
+}
+@media (min-width: 1440px) {
+  .form__list--extra {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .form__list--contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .form__submit {
+    display: flex;
+    align-items: center;
+    margin-bottom: 72px;
+    padding: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .form__submit {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1440px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
