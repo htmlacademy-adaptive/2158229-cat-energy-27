@@ -1,11 +1,28 @@
 .example {
   background-color: @color-example-grey;
+
+  @media (min-width: @tablet-width) {
+    background-color: @color-white;
+    background-image: linear-gradient(to bottom, transparent 60%, @color-grey 60%);
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(to bottom, transparent 20%, @color-grey 20%);
+  }
 }
 
 .example__wrapper {
+  position: relative;
   margin-left: 20px;
   margin-right: 20px;
   padding-bottom: 40px;
+}
+
+.example__container {
+  @media (min-width: @desktop-width) {
+    margin-top: 150px;
+    width: 450px;
+  }
 }
 
 .example__title {
@@ -67,6 +84,14 @@
   background-color: @color-example-grey;
   text-transform: lowercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    background-color: @color-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @color-grey;
+  }
 }
 
 .example__costs {
