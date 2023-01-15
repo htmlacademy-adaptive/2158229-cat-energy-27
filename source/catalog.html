@@ -12,7 +12,7 @@
   <!-- Шапка сайта -->
   <header class="main-header">
     <div class="main-header__wrapper">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <a class="main-header__logo">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="202" height="59">
@@ -26,17 +26,19 @@
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__item-link">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__item-link">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -358,6 +360,9 @@
       </section>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>

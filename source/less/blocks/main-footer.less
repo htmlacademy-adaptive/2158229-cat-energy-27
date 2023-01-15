@@ -1,5 +1,8 @@
-.main-footer__container {
+.main-footer {
   background-color: @color-grey;
+}
+
+.main-footer__container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -8,6 +11,11 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: 1440px;
   }
 }
 
@@ -51,7 +59,7 @@
 .main-footer__social {
   padding-top: 20px;
   padding-bottom: 16px;
-  width: 85%;
+  width: 100%;
   border-top: 1px solid @color-light-grey;
   border-bottom: 1px solid @color-light-grey;
 
