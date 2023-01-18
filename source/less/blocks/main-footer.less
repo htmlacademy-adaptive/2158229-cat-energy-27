@@ -11,6 +11,7 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    padding: 30px 58px;
   }
 
   @media (min-width: @desktop-width) {
@@ -24,9 +25,21 @@
 }
 
 .main-footer__map {
-  display: block;
+  border: none;
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  height: 362px;
+  min-height: 362px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 400px;
+  }
+}
+
+.main-footer__map iframe {
+  position: absolute;
+  display: block;
+  border: none;
 }
 
 .main-footer__logo {

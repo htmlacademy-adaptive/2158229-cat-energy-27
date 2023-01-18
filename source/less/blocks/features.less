@@ -1,7 +1,16 @@
 .features__wrapper {
+  counter-reset: section;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @color-border;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 40px;
+    padding-bottom: 46px;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
@@ -16,10 +25,16 @@
   .font();
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .features__list {
   .list();
+  position: relative;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -33,6 +48,7 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 94px;
+    margin-bottom: 50px;
   }
 }
 
@@ -41,8 +57,79 @@
   font-size: 14px;
   line-height: 18px;
   padding: 0 0 0 80px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  min-height: 60px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    align-items: flex-end;
+    margin-bottom: 0;
+    width: 245px;
+    min-height: 280px;
+    padding-left: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @color-green;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: inherit;
+    transform: translateY(-50%);
+
+    @media (min-width: @tablet-width) {
+      top: 40px;
+      width: 80px;
+      height: 80px;
+      transform: none;
+    }
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      counter-increment: section;
+      content: counter(section);
+      position: absolute;
+      right: 0;
+      .font();
+      font-size: 280px;
+      line-height: 280px;
+      color: @color-grey;
+      z-index: -1;
+    }
+  }
+}
+
+.features__item:nth-child(1)::before {
+  background-image: url("../img/icon-leaf.svg");
+}
+
+.features__item:nth-child(2)::before {
+  background-image: url("../img/icon-produce.svg");
+}
+
+.features__item:nth-child(3)::before {
+  background-image: url("../img/icon-eat.svg");
+}
+
+.features__item:nth-child(4)::before {
+  background-image: url("../img/icon-alarm.svg");
+}
+
+.features__item-text {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }

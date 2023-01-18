@@ -2,6 +2,10 @@
   .font-medium();
   position: relative;
   min-width: 297px;
+
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @color-light-grey;
+  }
 }
 
 .main-header__logo-title-image {

@@ -4,6 +4,7 @@
   @media (min-width: @tablet-width) {
     background-color: @color-white;
     background-image: linear-gradient(to bottom, transparent 60%, @color-grey 60%);
+    margin: -20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -24,6 +25,14 @@
 }
 
 .example__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
   @media (min-width: @desktop-width) {
     margin-top: 150px;
     width: 450px;
@@ -38,6 +47,12 @@
   font-size: 36px;
   line-height: 40px;
 
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+
   @media (min-width: @desktop-width) {
     margin: 0 auto;
     max-width: 1440px;
@@ -50,6 +65,12 @@
   margin-top: 0;
   margin-bottom: 25px;
   color: @color-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 54px;
+  }
 }
 
 .example__list {
@@ -72,6 +93,12 @@
   box-sizing: border-box;
   border: 1px solid @color-example-border;
   border-radius: 3px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+    width: 162px;
+    height: 72px;
+  }
 }
 
 .example__stats-value {
@@ -80,6 +107,11 @@
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__stats-mark {
@@ -97,6 +129,11 @@
 
   @media (min-width: @tablet-width) {
     background-color: @color-white;
+    top: 90%;
+    width: auto;
+    padding: 0 7px;
+    font-size: 14px;
+    line-height: 14px;
   }
 
   @media (min-width: @desktop-width) {
@@ -105,9 +142,27 @@
 }
 
 .example__costs {
-  display: inline-block;
+  text-align: center;
   .font();
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 9px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    text-transform: uppercase;
+  }
+}
+
+.example__cost-position {
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    margin-right: 60px;
+  }
 }
