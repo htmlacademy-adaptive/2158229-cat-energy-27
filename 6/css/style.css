@@ -757,16 +757,16 @@ body {
     z-index: -1;
   }
 }
-.features__item:nth-child(1)::before {
+.features__item--useful::before {
   background-image: url("../img/icon-leaf.svg");
 }
-.features__item:nth-child(2)::before {
+.features__item--form::before {
   background-image: url("../img/icon-produce.svg");
 }
-.features__item:nth-child(3)::before {
+.features__item--replace::before {
   background-image: url("../img/icon-eat.svg");
 }
-.features__item:nth-child(4)::before {
+.features__item--profit::before {
   background-image: url("../img/icon-alarm.svg");
 }
 .features__item-text {
@@ -994,12 +994,16 @@ body {
   border: none;
   position: relative;
   overflow: hidden;
-  width: 100%;
   min-height: 362px;
+  background-image: url("../img/location-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 @media (min-width: 768px) {
   .main-footer__map {
     min-height: 400px;
+    background-image: url("../img/location-tablet.jpg");
   }
 }
 .main-footer__map iframe {
@@ -1360,7 +1364,7 @@ body {
   margin-left: 20px;
   margin-right: 20px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .extra-products {
     margin: 0 auto;
     max-width: 1440px;
@@ -1630,6 +1634,7 @@ body {
   width: 100%;
 }
 .form__legend {
+  box-sizing: border-box;
   margin-bottom: 35px;
   display: flex;
   align-items: center;
