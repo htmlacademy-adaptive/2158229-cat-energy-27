@@ -12,7 +12,7 @@
   <!-- Шапка сайта -->
   <header class="main-header">
     <div class="main-header__wrapper">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <a class="main-header__logo">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="202" height="59">
@@ -26,17 +26,19 @@
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="index.html">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item main-nav__item--active">
-            <a class="main-nav__item-link">Подбор программы</a>
-          </li>
-        </ul>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__item-link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__item-link">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -129,11 +131,13 @@
         <div class="container wrapper wrapper--extra">
           <ul class="form__list form__list--extra">
             <li class="form__item form__item--checkbox">
-              <input class="form__checkbox-input" type="checkbox" name="extra-order" value="sugar" id="sugar" checked="checked">
+              <input class="form__checkbox-input" type="checkbox" name="extra-order" value="sugar" id="sugar"
+                checked="checked">
               <label class="form__checkbox-label" for="sugar">Сахарозаменитель</label>
             </li>
             <li class="form__item form__item--checkbox">
-              <input class="form__checkbox-input" type="checkbox" name="extra-order" value="drinking-water" id="drinking-water">
+              <input class="form__checkbox-input" type="checkbox" name="extra-order" value="drinking-water"
+                id="drinking-water">
               <label class="form__checkbox-label" for="drinking-water">Питьевая вода</label>
             </li>
             <li class="form__item form__item--checkbox">
@@ -165,7 +169,12 @@
           Санкт-Петербург
         </p>
       </section>
-      <img class="main-footer__map" src="img/map-mobile.jpg" width="320" height="362" alt="Карта расположения офиса.">
+      <div class="main-footer__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1673846101952!5m2!1sru!2sru"
+          style="border: 0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
       <!-- Блок футера с логотипом -->
       <section class="main-footer__container">
         <h2 class="visually-hidden">Блок с контактами и ссылками.</h2>
@@ -225,6 +234,9 @@
       </section>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>

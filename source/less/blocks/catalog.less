@@ -1,6 +1,12 @@
 .catalog {
   margin-left: 20px;
   margin-right: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 110px;
+  }
 }
 
 .catalog__list {
@@ -16,5 +22,6 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
     row-gap: 63px;
+    margin-bottom: 75px;
   }
 }

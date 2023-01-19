@@ -2,12 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 26px 20px 26px 20px;
+  padding: 26px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 70px;
+  }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 95px;
-    left: 110px;
+    top: 115px;
+    left: 20px;
     width: 570px;
     z-index: 1;
     background-color: @color-white;
@@ -35,4 +39,8 @@
 
 .cooperation--grey {
   background-color: @color-grey;
+}
+
+.cooperation--white {
+  background-color: @color-white;
 }

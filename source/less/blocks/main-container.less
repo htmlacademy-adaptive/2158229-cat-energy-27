@@ -1,15 +1,28 @@
 .main-container {
   .font-text();
+  min-width: 297px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+  }
 }
 
 .main-container__title {
   .font();
+  box-sizing: border-box;
   margin-top: 0;
   margin-bottom: 41px;
-  padding: 27px 20px 0 20px;
+  padding: 27px 0 0 20px;
   font-size: 36px;
   line-height: 36px;
-  min-width: 320px;
+  min-width: 297px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 80px;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
@@ -28,6 +41,11 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   @media (min-width: @desktop-width) {
     display: block;
