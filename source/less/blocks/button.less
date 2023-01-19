@@ -12,4 +12,13 @@
   cursor: pointer;
   padding-top: 11px;
   padding-bottom: 11px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    color: fadeout(@color-white, 70);
+  }
 }
