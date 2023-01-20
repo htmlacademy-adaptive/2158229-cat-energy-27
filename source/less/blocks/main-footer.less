@@ -73,6 +73,10 @@
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-footer__social {
@@ -99,4 +103,13 @@
   &:active {
     opacity: 0.6;
   }
+}
+
+.main-footer__copy-image {
+  color: @color-grey-social;
+}
+
+.main-footer__copy-link:hover .main-footer__copy-image,
+.main-footer__copy-link:focus .main-footer__copy-image {
+  color: @color-green;
 }

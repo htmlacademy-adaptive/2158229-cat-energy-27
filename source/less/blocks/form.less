@@ -36,13 +36,6 @@
   line-height: 16px;
 }
 
-.form__contacts-input:placeholder-shown,
-.form__data-input:placeholder-shown,
-.form__comments-input:placeholder-shown {
-  .font();
-  text-transform: uppercase;
-}
-
 .form__fieldset {
   margin: 0;
   padding: 0;
@@ -63,13 +56,6 @@
   }
 }
 
-.form__data-input,
-.form__contacts-input,
-.form__input-tel {
-  padding: 12px 15px 13px;
-  flex-grow: 1;
-}
-
 .form__list--radio-group {
   padding: 20px;
   margin-left: -20px;
@@ -86,7 +72,7 @@
 .form__icon-tel,
 .form__icon-email {
   position: absolute;
-  top: 13px;
+  top: 11px;
   right: 13px;
   width: 20px;
   height: 21px;
@@ -99,6 +85,7 @@
 .form__contacts-label {
   position: relative;
   display: flex;
+  align-items: center;
   width: 100%;
 }
 
@@ -181,5 +168,89 @@
     margin: 0 auto;
     padding: 0;
     max-width: 1440px;
+  }
+}
+
+// .form__data-label {
+//   padding-right: 13px;
+// }
+
+.form__comments-input,
+.form__data-input,
+.form__contacts-input,
+.form__input-tel {
+  padding: 12px 31px 13px 15px;
+  flex-grow: 1;
+  border: 1px solid @color-grey-form;
+  text-transform: uppercase;
+  margin-left: 12px;
+
+  @media (min-width: @tablet-width) {
+    padding: 12px 18px 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 9px 20px 11px;
+    line-height: 30px;
+  }
+
+  &:invalid {
+    border: 1px solid @color-grey-form;
+  }
+
+  &:hover {
+    border: 1px solid @color-example-border;
+    box-shadow: none;
+  }
+
+  &:focus {
+    border: 1px solid @color-dark-grey;
+    box-shadow: 0 0 0 1px @color-dark-grey;
+    outline: none;
+  }
+
+  &::placeholder {
+    .font();
+    color: @color-dark-grey;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.form__input--error:invalid {
+  border: 1px solid @color-error;
+  box-shadow: 0 0 0 1px @color-error;
+  padding: 12px 31px 13px 15px;
+  flex-grow: 1;
+  text-transform: uppercase;
+  margin-left: 12px;
+
+  @media (min-width: @tablet-width) {
+    padding: 12px 18px 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 9px 20px 11px;
+    line-height: 30px;
+  }
+
+  &:hover {
+    border: 1px solid @color-example-border;
+    box-shadow: none;
+  }
+
+  &:focus {
+    border: 1px solid @color-dark-grey;
+    box-shadow: 0 0 0 1px @color-dark-grey;
+    outline: none;
+  }
+
+  &::placeholder {
+    .font();
+    color: @color-dark-grey;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 18px;
   }
 }
