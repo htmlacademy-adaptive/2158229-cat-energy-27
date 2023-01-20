@@ -192,4 +192,31 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 100px;
+    width: 32px;
+    height: 10px;
+    background-image: url("../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 32px 10px;
+
+    @media (min-width: @tablet-width) {
+      top: 30px;
+      left: 130px;
+    }
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-image: url("../img/icon-arrow-big.svg");
+  }
+
+  // &:active::after,
+  &:active {
+    opacity: 0.3;
+  }
 }

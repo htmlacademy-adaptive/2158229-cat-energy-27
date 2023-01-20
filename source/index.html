@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин «Кэт энерджи»</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -29,7 +33,7 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__item-link main-nav__item-link--white">Главная</a>
+              <a class="main-nav__item-link main-nav__item-link--white main-nav__item-link--index-current">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__item-link main-nav__item-link--white" href="catalog.html">Каталог продукции</a>
@@ -48,12 +52,12 @@
             <p class="intro__slogan">Занялся собой? Займись котом!</p>
           </div>
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png, img/index-can-desktop@2x.png 2x"
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x"
               width="552" height="499">
-            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png, img/index-can-tablet@2x.png 2x"
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x"
               width="701" height="609">
-            <img class="intro__img" src="img/index-can-mobile.png" width="280" height="270"
-              alt="Корм для кошек Cat Energy Pro с курицей.">
+            <img class="intro__img" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280"
+              height="270" alt="Корм для кошек Cat Energy Pro с курицей.">
           </picture>
           <div class="intro__link-wrapper">
             <a class="intro__link button" href="form.html">Подобрать программу</a>
@@ -128,11 +132,17 @@
           </p>
         </div>
         <div class="example__slider slider">
-          <img class="slider__img slider__img--before" src="img/cat-slider-fat-mobile.png" width="280" height="256"
-            alt="Слайдер с котами было.">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/cat-slider-fat-tablet.png 1x, img/cat-slider-fat-tablet@2x.png 2x">
+            <img class="slider__img slider__img--before" src="img/cat-slider-fat-mobile.png" srcset="img/cat-slider-fat-mobile@2x.png 2x" width="280" height="256"
+              alt="Слайдер с котами было.">
+          </picture>
           <input type="range" min="1" max="100" value="50" class="slider__range">
-          <img class="slider__img slider__img--after" src="img/cat-slider-thin-mobile.png" width="280" height="256"
-            alt="Слайдер с котами стало.">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/cat-slider-thin-tablet.png 1x, img/cat-slider-thin-tablet@2x.png 2x">
+            <img class="slider__img slider__img--after" src="img/cat-slider-thin-mobile.png" srcset="img/cat-slider-thin-mobile@2x.png 2x" width="280" height="256"
+              alt="Слайдер с котами стало.">
+          </picture>
         </div>
       </div>
     </section>

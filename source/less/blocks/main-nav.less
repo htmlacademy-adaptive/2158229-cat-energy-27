@@ -49,13 +49,30 @@
 
 .main-nav__item-link {
   .font-medium();
+  display: inline-block;
   color: @color-black;
   text-transform: uppercase;
   text-decoration: none;
 
+  @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -158,5 +175,17 @@
     background-color: @color-white;
     width: 100%;
     margin-left: -20px;
+  }
+}
+
+.main-nav__item--active {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @color-green;
+  }
+}
+
+.main-nav__item-link--index-current {
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @color-white;
   }
 }
