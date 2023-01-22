@@ -48,7 +48,7 @@
     </div>
   </header>
   <!-- Основное содержимое сайта -->
-  <main class="main-container">
+  <main class="main-container main-container--form">
     <h1 class="main-container__title">Подбор программы</h1>
     <p class="main-container__slogan">Заполните анкету и мы подберем<br> программу питания для вашего кота</p>
     <!-- Форма обратной связи -->
@@ -92,8 +92,8 @@
           </div>
         </div>
       </fieldset>
-      <fieldset class="form__fieldset">
-        <legend class="form__legend form__legend--contact">Контактные данные<br>(владельца кота)</legend>
+      <fieldset class="form__fieldset form__fieldset--contact-group">
+        <legend class="form__legend form__legend--contact">Контактные данные (владельца кота)</legend>
         <div class="container wrapper wrapper--contact">
           <ul class="form__list form__list--contact">
             <li class="form__item form__item--email">
@@ -117,7 +117,7 @@
           </ul>
         </div>
       </fieldset>
-      <fieldset class="form__fieldset">
+      <fieldset class="form__fieldset form__fieldset--comment-group">
         <legend class="form__legend form__legend--comment">Комментарий</legend>
         <div class="container wrapper wrapper--comment">
           <label class="visually-hidden" for="owner-comment">Введите комментарий</label>
