@@ -3,8 +3,8 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 86px;
-    margin-right: 79px;
-    min-width: 896px;
+    margin-right: 95px;
+    min-width: 875px;
   }
 }
 
@@ -19,10 +19,17 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    background: @color-white;
+    display: inline-block;
+    padding: 0 9px;
+    position: absolute;
+    top: -116px;
+    left: 28px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 60px;
+    left: -10px;
   }
 }
 
@@ -30,10 +37,15 @@
   margin-left: 20px;
   margin-right: 20px;
 
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
   @media (min-width: @desktop-width) {
     margin: 0 auto;
     max-width: 1440px;
-    padding: 0 110px;
+    padding: 0 92px;
   }
 }
 
@@ -43,7 +55,6 @@
   border-top: 1px solid @color-example-border;
 
   &:last-child {
-    padding-top: 25px;
     border-bottom: 1px solid @color-example-border;
 
     @media (min-width: @desktop-width) {
@@ -52,7 +63,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 26px 38px 28px;
+    padding: 26px 41px 28px 37px;
     border-left: 1px solid @color-example-border;
     border-right: 1px solid @color-example-border;
   }
@@ -60,9 +71,10 @@
   @media (min-width: @desktop-width) {
     border-left: none;
     border-right: none;
-    padding: 20px 0;
+    padding: 14px 0;
     display: flex;
     align-items: center;
+    gap: 38px;
     justify-content: space-between;
   }
 }
@@ -112,9 +124,14 @@
 }
 
 .extra-products__container {
+  @media (min-width: @tablet-width) {
+    margin-top: 92px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: -6px;
   }
 }
 
@@ -122,10 +139,12 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 11px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 600px;
+    margin-bottom: 0;
   }
 }
 
@@ -140,5 +159,13 @@
     line-height: 20px;
     padding-left: 100px;
     padding-right: 100px;
+  }
+}
+
+.extra-products__wrapper {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 8px;
   }
 }

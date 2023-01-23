@@ -30,9 +30,9 @@
       <path d="M61.9496 50.9314H16.0929C15.4201 50.9314 14.8741 50.3889 14.8741 49.7204C14.8741 49.0518 15.4201 48.5093 16.0929 48.5093H61.9496C62.6223 48.5093 63.1683 49.0518 63.1683 49.7204C63.1683 50.3889 62.6229 50.9314 61.9496 50.9314Z" fill="white"/>
     </symbol>
     <symbol viewBox="0 0 18 14" fill="none" id="icon-email">
-      <path d="M.5 5.5v8h17v-8M.5.5h17v2L9 8.5l-8.5-6v-2Z" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M.5 5.5v8h17v-8M.5.5h17v2L9 8.5l-8.5-6v-2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
     <symbol viewBox="0 0 16 16" id="icon-phone">
-      <path d="M7 8h8.5m0 0L13 5.5M15.5 8 13 10.5M5.5.5v5h-3v5h3v5H3c-1.5 0-2.5-1-2.5-2.5V3C.5 1.5 1.5.5 3 .5h2.5Z" stroke="#222222" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M7 8h8.5m0 0L13 5.5M15.5 8 13 10.5M5.5.5v5h-3v5h3v5H3c-1.5 0-2.5-1-2.5-2.5V3C.5 1.5 1.5.5 3 .5h2.5Z" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
   </svg>
