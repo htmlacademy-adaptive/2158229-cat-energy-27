@@ -23,7 +23,12 @@
   margin-right: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-right: 0;
+    padding-right: 47px;
+    padding-left: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
 
@@ -96,8 +101,7 @@
 
   @media (min-width: @tablet-width) {
     border: 1px solid @color-light-grey;
-    margin: 0;
-    margin-top: 74px;
+    margin: 75px 72px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -484,11 +488,11 @@
 
   @media (min-width: @tablet-width) {
     top: -25px;
-    left: -82px;
+    left: -80px;
     width: unset;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     left: -39px;
   }
 }
@@ -524,9 +528,18 @@
   margin-right: 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 70px;
     margin-bottom: 30px;
     margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 113px;
+  }
+}
+
+.wrapper--comment {
+  @media (min-width: @tablet-width) {
+    padding: 0 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -568,4 +581,10 @@
 
 .form__input-tel:focus + .form__icon-tel {
   color: @color-green;
+}
+
+.form__label--checkbox {
+  @media (min-width: @tablet-width) {
+    min-width: 133px;
+  }
 }
