@@ -27,7 +27,12 @@
 .programs__wrapper {
   margin-left: 20px;
   margin-right: 20px;
-  margin-bottom: 27px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
@@ -43,12 +48,12 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  padding: 30px 20px 0 90px;
+  padding: 25px 20px 6px 90px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 24px;
+    top: 21px;
     left: 22px;
     width: 50px;
     height: 50px;
@@ -73,10 +78,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 77px 0 24px 0;
+    padding: 77px 0 0 0;
     font-size: 36px;
     line-height: 36px;
     color: @color-black;
+    margin-bottom: 22px;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,7 +95,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 21px;
+    top: 18px;
     left: 29px;
     width: 36px;
     height: 50px;
@@ -120,8 +126,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 35px;
-    left: 11px;
+    top: 31px;
+    left: 14px;
     width: 67px;
     height: 28px;
     background-image: url("../img/cat-fat.svg");
@@ -130,7 +136,7 @@
     background-position: center;
 
     @media (min-width: @tablet-width) {
-      top: 135px;
+      top: 130px;
       right: 28px;
       left: auto;
       width: 268px;
@@ -162,6 +168,8 @@
     color: @color-black;
     font-size: 16px;
     line-height: 24px;
+    min-height: 96px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -196,7 +204,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 23px;
+    top: 20px;
     left: 100px;
     width: 32px;
     height: 10px;

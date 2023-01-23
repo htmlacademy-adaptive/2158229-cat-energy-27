@@ -1,6 +1,6 @@
 .example__title {
   margin-top: 0;
-  margin-bottom: 45px;
+  margin-bottom: 42px;
   .font();
   font-size: 36px;
   line-height: 40px;
@@ -22,7 +22,7 @@
   font-size: 14px;
   line-height: 18px;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   color: @color-dark-grey;
 
   @media (min-width: @tablet-width) {
@@ -46,6 +46,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    gap: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -118,13 +119,15 @@
   .font();
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 30px;
+  margin-bottom: -10px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 20px;
     text-align: right;
     text-transform: uppercase;
+    margin-right: -20px;
+    line-height: 30px;
+    margin-top: 5px;
   }
 
   @media (min-width: @desktop-width) {
@@ -133,6 +136,8 @@
 }
 
 .example__cost-position {
+  letter-spacing: 0.6px;
+
   @media (min-width: @tablet-width) {
     display: block;
   }
@@ -171,12 +176,16 @@
 .example {
   position: relative;
   display: grid;
-  gap: 20px;
-  padding: 20px 0;
+  gap: 32px;
+  padding: 25px 0;
+  padding-bottom: 38px;
 
   @media (min-width: @tablet-width) {
-    --bg-top-shift: calc(100% - 380px);
-    gap: 40px;
+    --bg-top-shift: calc(94% - 400px);
+    gap: 105px;
+    padding-top: 14px;
+    margin-left: 10px;
+    padding-bottom: 100px;
   }
 
   @media (min-width: @desktop-width) {
@@ -203,6 +212,10 @@
   margin: 0 auto;
   align-self: start;
   justify-self: center;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
 }
 
 .example__slider {
