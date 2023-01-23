@@ -1,48 +1,6 @@
-.example {
-  background-color: @color-example-grey;
-
-  @media (min-width: @tablet-width) {
-    background-color: @color-white;
-    background-image: linear-gradient(to bottom, transparent 60%, @color-grey 60%);
-    margin: -20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-image: linear-gradient(to bottom, transparent 20%, @color-grey 20%);
-  }
-}
-
-.example__wrapper {
-  position: relative;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-bottom: 40px;
-
-  @media (min-width: @desktop-width) {
-    margin: 0 auto;
-    max-width: 1440px;
-  }
-}
-
-.example__container {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 80px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 150px;
-    width: 450px;
-  }
-}
-
 .example__title {
   margin-top: 0;
-  margin-bottom: 33px;
-  padding-top: 27px;
+  margin-bottom: 42px;
   .font();
   font-size: 36px;
   line-height: 40px;
@@ -56,6 +14,7 @@
   @media (min-width: @desktop-width) {
     margin: 0 auto;
     max-width: 1440px;
+    margin-bottom: 150px;
   }
 }
 
@@ -63,13 +22,17 @@
   font-size: 14px;
   line-height: 18px;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   color: @color-dark-grey;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 500px;
   }
 }
 
@@ -80,6 +43,16 @@
   flex-wrap: wrap;
   margin-bottom: 34px;
   gap: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    gap: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
 }
 
 .example__stats {
@@ -89,7 +62,7 @@
   align-items: center;
   justify-content: center;
   width: 124px;
-  height: 56px;
+  min-height: 56px;
   box-sizing: border-box;
   border: 1px solid @color-example-border;
   border-radius: 3px;
@@ -123,7 +96,7 @@
   font-size: 12px;
   line-height: 12px;
   color: @color-dark-grey;
-  background-color: @color-example-grey;
+  background-color: @color-grey;
   text-transform: lowercase;
   text-align: center;
 
@@ -146,17 +119,25 @@
   .font();
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 9px;
+  margin-bottom: -10px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 20px;
     text-align: right;
     text-transform: uppercase;
+    margin-right: -20px;
+    line-height: 30px;
+    margin-top: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: auto;
   }
 }
 
 .example__cost-position {
+  letter-spacing: 0.6px;
+
   @media (min-width: @tablet-width) {
     display: block;
   }
@@ -164,5 +145,90 @@
   @media (min-width: @desktop-width) {
     display: inline-block;
     margin-right: 60px;
+    width: auto;
+  }
+}
+
+.example__row {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+}
+
+.example--center {
+  margin: 20px;
+  margin-top: 50px;
+
+  @media (min-width: @tablet-width) {
+    margin: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    width: 1400px;
+  }
+}
+
+.example {
+  position: relative;
+  display: grid;
+  gap: 32px;
+  padding: 25px 0;
+  padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    --bg-top-shift: calc(94% - 400px);
+    gap: 105px;
+    padding-top: 14px;
+    margin-left: 10px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    --bg-top-shift: 236px;
+    grid-template-columns: auto 560px;
+    gap: 224px;
+    padding: 70px 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    top: var(--bg-top-shift, 0);
+    width: 100vw;
+    background-color: @color-grey;
+    box-shadow: 100vw 0 0 0 @color-grey;
+  }
+}
+
+.example__compare {
+  margin: 0 auto;
+  align-self: start;
+  justify-self: center;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
+}
+
+.example__slider {
+  margin: 0 auto;
+}
+
+.example__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
   }
 }

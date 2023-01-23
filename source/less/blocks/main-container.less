@@ -2,9 +2,16 @@
   .font-text();
   min-width: 297px;
   box-sizing: border-box;
+  max-width: none;
 
   @media (min-width: @tablet-width) {
     padding: 0 20px;
+  }
+}
+
+.main-container--form {
+  @media (min-width: @tablet-width) {
+    padding: 0;
   }
 }
 
@@ -21,6 +28,8 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    padding-left: 70px;
+    padding-right: 70px;
     margin-bottom: 80px;
   }
 
@@ -41,10 +50,13 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 
   @media (min-width: @desktop-width) {
