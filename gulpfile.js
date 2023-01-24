@@ -5,6 +5,7 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
+import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
@@ -29,8 +30,9 @@ csso()
 
 // HTML
 
-const html = () => {
+export const html = () => {
 return gulp.src('source/*.html')
+.pipe(htmlmin({ collapseWhitespace: true }))
 .pipe(gulp.dest('build'));
 }
 
@@ -38,6 +40,8 @@ return gulp.src('source/*.html')
 
 const scripts = () => {
 return gulp.src('source/js/script.js')
+.pipe(terser())
+.pipe(rename('javascript.min.js'))
 .pipe(gulp.dest('build/js'))
 .pipe(browser.stream());
 }
