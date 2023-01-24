@@ -58,7 +58,7 @@ return gulp.src('source/img/**/*.{png,jpg}')
 // WebP
 
 const createWebp = () => {
-return gulp.src('source/img/**/*.{png,jpg}')
+return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicons/*'])
 .pipe(squoosh({
 webp: {}
 }))
@@ -87,7 +87,7 @@ inlineSvg: true
 const copy = (done) => {
 gulp.src([
 'source/fonts/*.{woff2,woff}',
-'source/*.ico',
+'source/favicons/*.ico',
 ], {
 base: 'source'
 })
