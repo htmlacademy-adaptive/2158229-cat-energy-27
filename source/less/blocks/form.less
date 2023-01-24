@@ -131,17 +131,18 @@
 }
 
 .form__comments-input {
+  .font();
+  color: @color-dark-grey;
+  font-size: 20px;
+  line-height: 30px;
   box-sizing: border-box;
   padding: 9px 15px 9px 12px;
   width: 100%;
   min-height: 150px;
-  font-size: 16px;
-  line-height: 18px;
   border: 1px solid @color-grey-form;
   resize: none;
   outline: 0;
   flex-grow: 1;
-  text-transform: uppercase;
   margin: 0;
   align-items: center;
   margin-top: 21px;
@@ -155,7 +156,7 @@
     .font();
     color: @color-dark-grey;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 18px;
 
     @media (min-width: @tablet-width) {
@@ -243,11 +244,14 @@
 .form__data-input,
 .form__contacts-input,
 .form__input-tel {
+  .font();
+  color: @color-dark-grey;
+  font-size: 20px;
+  line-height: 30px;
   margin-left: 12px;
   padding: 16px 10px 9px 20px;
   flex-grow: 1;
   border: 1px solid @color-grey-form;
-  text-transform: uppercase;
   align-items: center;
 
   @media (min-width: @tablet-width) {
@@ -281,8 +285,8 @@
     .font();
     color: @color-dark-grey;
     text-transform: uppercase;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 30px;
 
     @media (min-width: @tablet-width) {
       font-size: 20px;
