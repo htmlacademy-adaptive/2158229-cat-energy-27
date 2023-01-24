@@ -1,4 +1,7 @@
 {
+  "name": "cat-energy-website",
+  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "author": "Николай Дидур <nadvoodoo@gmail.com> (https://github.com/NADVooDoo)",
   "private": true,
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
