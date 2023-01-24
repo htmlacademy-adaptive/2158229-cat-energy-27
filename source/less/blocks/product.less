@@ -152,6 +152,7 @@
 
   @media (min-width: @tablet-width) {
     background-image: none;
+    align-items: center;
   }
 }
 
@@ -183,7 +184,8 @@
     line-height: 18px;
     color: @color-dark-grey;
     margin-top: 20px;
-    margin-bottom: 90px;
+    margin-bottom: 84px;
+    min-height: 37px;
   }
 }
 
@@ -234,6 +236,10 @@
   line-height: 20px;
   color: @color-dark-grey;
   background-color: @color-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .product__img {
