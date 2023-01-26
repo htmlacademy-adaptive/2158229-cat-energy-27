@@ -49,80 +49,6 @@
   }
 }
 
-.extra-product {
-  padding-top: 13px;
-  padding-bottom: 18px;
-  border-top: 1px solid @color-example-border;
-
-  &:last-child {
-    border-bottom: 1px solid @color-example-border;
-
-    @media (min-width: @desktop-width) {
-      padding-top: 15px;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 26px 41px 28px 37px;
-    border-left: 1px solid @color-example-border;
-    border-right: 1px solid @color-example-border;
-  }
-
-  @media (min-width: @desktop-width) {
-    border-left: none;
-    border-right: none;
-    padding: 14px 0;
-    display: flex;
-    align-items: center;
-    gap: 38px;
-    justify-content: space-between;
-  }
-}
-
-.extra-product__subtitle {
-  margin-top: 0;
-  margin-bottom: 13px;
-  .font();
-  font-size: 16px;
-  line-height: 16px;
-  color: @color-product-black;
-  text-transform: uppercase;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin: 0;
-  }
-}
-
-.extra-product__form,
-.extra-product__price {
-  display: inline-block;
-  margin: 0;
-  padding-bottom: 8px;
-  font-size: 14px;
-  line-height: 20px;
-  color: @color-dark-grey;
-
-  @media (min-width: @tablet-width) {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
-  }
-}
-
-.extra-product__price {
-  @media (min-width: @tablet-width) {
-    padding-left: 50px;
-  }
-}
-
 .extra-products__container {
   @media (min-width: @tablet-width) {
     margin-top: 92px;
@@ -132,33 +58,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: -6px;
-  }
-}
-
-.extra-product__card {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 11px;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-width: 600px;
-    margin-bottom: 0;
-  }
-}
-
-.extra-product__row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.extra-product__link {
-  @media (min-width: @desktop-width) {
-    font-size: 16px;
-    line-height: 20px;
-    padding-left: 100px;
-    padding-right: 100px;
   }
 }
 
