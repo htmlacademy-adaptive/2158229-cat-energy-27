@@ -38,7 +38,13 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     gap: 33px;
+    flex-wrap: wrap;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 600px;
+  }
+
 }
 
 .main-nav__item {
